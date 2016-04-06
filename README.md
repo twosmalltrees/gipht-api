@@ -7,11 +7,11 @@ Gipht uses [devise_token_auth](https://github.com/lynndylanhurley/devise_token_a
 All requests by the client need to be authenticated with the appropriate headers. As discussed in the devise_token_auth docs, the standard format for the required headers is:
 
 
-  "access-token": "wwwww",
-  "token-type":   "Bearer",
-  "client":       "xxxxx",
-  "expiry":       "yyyyy",
-  "uid":          "zzzzz"
+    "access-token": "wwwww",
+    "token-type":   "Bearer",
+    "client":       "xxxxx",
+    "expiry":       "yyyyy",
+    "uid":          "zzzzz"
 
 
 
