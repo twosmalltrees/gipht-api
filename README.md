@@ -18,18 +18,18 @@ All requests by the client need to be authenticated with the appropriate headers
 Endpoints
 ---------
 
-### Authorization
+#### Authorization
 
-Refer to the devise_token_auth [docs](https://github.com/lynndylanhurley/devise_token_auth#usage-tldr) for full details of available authorization endpoints. 
+Refer to the devise_token_auth [docs](https://github.com/lynndylanhurley/devise_token_auth#usage-tldr) for full details of available authorization endpoints.
 
-### Conversations
+#### Conversations
 
-### Messages
+#### Messages
 
-### Friendships
+#### Friendships
 
-### Giphts
+#### Giphts
 
-### Favourites
+#### Favourites
 
-### Notifications
+#### Notifications

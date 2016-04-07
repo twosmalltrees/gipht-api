@@ -1,0 +1,2 @@
+class GiphtsController < ApplicationController
+end

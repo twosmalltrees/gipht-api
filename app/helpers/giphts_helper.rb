@@ -1,0 +1,2 @@
+module GiphtsHelper
+end
