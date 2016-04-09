@@ -25,18 +25,18 @@ Refer to the devise_token_auth [docs](https://github.com/lynndylanhurley/devise_
 #### Conversations
 
 
-| Path               | Method     | Action                | Purpose    
-|--------------------|------------|-----------------------|------------
-| `/conversations`     | `GET`        | `conversations#index`  | Returns all conversations for the `current_user`, sorted by `created_at` of each conversations most recent message. No need to pass through any `params`.    
+| Path                 | Method       | Action                  | Description    
+|----------------------|--------------|-------------------------|------------
+| `/conversations`     | `GET`        | `conversations#index`   | Returns all conversations for the `current_user`, sorted by `created_at` of each conversations most recent message. No need to pass through any `params`.    
 | `/conversations`     | `POST`       | `conversations#create`  | Creates a new conversation from the `params` passed through.            
-| `/conversations/:id` | `GET`        | conversations#show    | Returns a single conversation, as specified by `params[:id]`. No further `params` required.          
-| `/conversations/:id` | `PATCH`      | `conversations#update`  |            
-| `/conversations/:id` | `PUT`        | `conversations#update`  |            
-| `/conversations/:id` | `DELETE`     | `conversations#destroy` |            
+| `/conversations/:id` | `GET`        | conversations#show      | Returns a single conversation, as specified by `params[:id]`. No further `params` required.          
+| `/conversations/:id` | `PATCH`      | `conversations#update`  | Updates the specified conversation, as based on the provided `params`. Returns the updated conversation.           
+| `/conversations/:id` | `PUT`        | `conversations#update`  | As above, updates the specified conversation, as based on the provided `params`. Returns the updated conversation.          
+| `/conversations/:id` | `DELETE`     | `conversations#destroy` | Destroys the specified conversations, as per `params[:id]`. The destroy action will only be allowed to complete if the `current_user` is the only remaining user in the conversation.
 
 #### Messages
 
-| Path                                         | Method     | Action              | Purpose    
+| Path                                         | Method     | Action              | Description    
 |----------------------------------------------|------------|---------------------|------------
 | `/conversations/:conversation_id/messages`    | GET        | messages#index      |            
 | `/conversations/:conversation_id/messages`  | POST       | messages#create     |            
@@ -47,7 +47,7 @@ Refer to the devise_token_auth [docs](https://github.com/lynndylanhurley/devise_
 
 #### Friendships
 
-| Path                      | Method     | Action                | Purpose    
+| Path                      | Method     | Action                | Description    
 |---------------------------|------------|-----------------------|------------
 | /friendships              | GET        | friendships#index     |            
 | /friendships              | POST       | friendships#create    |            
@@ -57,7 +57,7 @@ Refer to the devise_token_auth [docs](https://github.com/lynndylanhurley/devise_
 
 #### Giphts
 
-| Path            | Method     | Action             | Purpose    
+| Path            | Method     | Action             | Description    
 |-----------------|------------|--------------------|------------
 | /giphts         | GET        | giphts#index       |            
 | /giphts         | POST       | giphts#create      |            
@@ -65,7 +65,7 @@ Refer to the devise_token_auth [docs](https://github.com/lynndylanhurley/devise_
 
 #### Favourites
 
-| Path                      | Method     | Action                | Purpose    
+| Path                      | Method     | Action                | Description    
 |---------------------------|------------|-----------------------|------------
 | /favourites               | GET        | favourites#index      |            
 | /favourites               | POST       | favourites#create     |            
