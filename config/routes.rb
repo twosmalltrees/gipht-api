@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   end
 
   resources :favourites, :only => [:index, :show, :create, :update, :destroy]
-  resources :friendships, :only => [:index, :show, :create, :update, :destroy]
-  resources :giphts, :only => [:index, :show, :create, :update, :destroy]
+
+  resources :friendships, :only => [:index, :show, :create, :destroy]
+
+  post '/friendships/:id/confirm', to: 'friendships#confirm', as: 'confirm_friendship'
+
+  resources :giphts, :only => [:index, :show, :create]
 
 end

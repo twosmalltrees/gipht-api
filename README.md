@@ -29,7 +29,7 @@ Refer to the devise_token_auth [docs](https://github.com/lynndylanhurley/devise_
 |--------------------|------------|-----------------------|------------
 | /conversations     | GET        | conversations#index   |            
 | /conversations     | POST       | conversations#create  |            
-| /conversations/:id | GET        | conversation#show     |            
+| /conversations/:id | GET        | conversations#show    |            
 | /conversations/:id | PATCH      | conversations#update  |            
 | /conversations/:id | PUT        | conversations#update  |            
 | /conversations/:id | DELETE     | conversations#destroy |            
@@ -49,8 +49,26 @@ Refer to the devise_token_auth [docs](https://github.com/lynndylanhurley/devise_
 
 #### Friendships
 
+| Path                      | Method     | Action                | Purpose    
+|---------------------------|------------|-----------------------|------------
+| /friendships              | GET        | friendships#index     |            
+| /friendships              | POST       | friendships#create    |            
+| /friendships/:id          | GET        | friendships#show      |                    
+| /friendships/:id          | DELETE     | friendships#destroy   |     
+| /friendships/:id/confirm  | POST       | friendships#confirm   |  
+
 #### Giphts
 
 #### Favourites
+
+| Path            | Method     | Action             | Purpose    
+|-----------------|------------|--------------------|------------
+| /favourites     | GET        | favourites#index   |            
+| /favourites     | POST       | favourites#create  |            
+| /favourites/:id | GET        | favourites#show    |            
+| /favourites/:id | PATCH      | favourites#update  |            
+| /favourites/:id | PUT        | favourites#update  |            
+| /favourites/:id | DELETE     | favourites#destroy |   
+
 
 #### Notifications
