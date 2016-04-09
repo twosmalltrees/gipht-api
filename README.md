@@ -27,9 +27,9 @@ Refer to the devise_token_auth [docs](https://github.com/lynndylanhurley/devise_
 
 | Path               | Method     | Action                | Purpose    
 |--------------------|------------|-----------------------|------------
-| /conversations     | GET        | conversations#index   | Returns all conversations for the `current_user`, sorted by most recent message. No need to pass through any params.    
+| /conversations     | GET        | conversations#index   | Returns all conversations for the `current_user`, sorted by `created_at` of each conversations most recent message. No need to pass through any `params`.    
 | /conversations     | POST       | conversations#create  | Creates a new conversation from the `params` passed through.            
-| /conversations/:id | GET        | conversations#show    |            
+| /conversations/:id | GET        | conversations#show    | Returns a single conversation, as specified by `params[:id]`. No further `params` required.          
 | /conversations/:id | PATCH      | conversations#update  |            
 | /conversations/:id | PUT        | conversations#update  |            
 | /conversations/:id | DELETE     | conversations#destroy |            
