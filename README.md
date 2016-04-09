@@ -24,6 +24,18 @@ Refer to the devise_token_auth [docs](https://github.com/lynndylanhurley/devise_
 
 #### Conversations
 
+
+| Path               | Method     | Action                | Purpose    |
+|--------------------|------------|-----------------------|------------|
+| /conversations     | GET        | conversations#index   |            |
+| /conversations     | POST       | conversations#create  |            |
+| /conversations/:id | GET        | conversation#show     |            |
+| /conversations/:id | PATCH      | conversations#update  |            |
+| /conversations/:id | PUT        | conversations#update  |            |
+| /conversations/:id | DELETE     | conversations#destroy |            |
+
+
+
 #### Messages
 
 #### Friendships
