@@ -34,8 +34,6 @@ Refer to the devise_token_auth [docs](https://github.com/lynndylanhurley/devise_
 | /conversations/:id | PUT        | conversations#update  |            
 | /conversations/:id | DELETE     | conversations#destroy |            
 
-
-
 #### Messages
 
 | Path                                         | Method     | Action              | Purpose    
@@ -59,16 +57,17 @@ Refer to the devise_token_auth [docs](https://github.com/lynndylanhurley/devise_
 
 #### Giphts
 
-#### Favourites
-
 | Path            | Method     | Action             | Purpose    
 |-----------------|------------|--------------------|------------
-| /favourites     | GET        | favourites#index   |            
-| /favourites     | POST       | favourites#create  |            
-| /favourites/:id | GET        | favourites#show    |            
-| /favourites/:id | PATCH      | favourites#update  |            
-| /favourites/:id | PUT        | favourites#update  |            
-| /favourites/:id | DELETE     | favourites#destroy |   
+| /giphts         | GET        | giphts#index       |            
+| /giphts         | POST       | giphts#create      |            
+| /giphts/:id     | GET        | giphts#show        |    
 
+#### Favourites
 
-#### Notifications
+| Path                      | Method     | Action                | Purpose    
+|---------------------------|------------|-----------------------|------------
+| /favourites               | GET        | favourites#index      |            
+| /favourites               | POST       | favourites#create     |            
+| /favourites/:id           | GET        | favourites#show       |                    
+| /favourites/:id           | DELETE     | favourites#destroy    |     
