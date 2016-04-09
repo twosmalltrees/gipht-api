@@ -32,14 +32,14 @@ Refer to the devise_token_auth [docs](https://github.com/lynndylanhurley/devise_
 | `/conversations/:id` | `GET`        | conversations#show      | Returns a single conversation, as specified by `params[:id]`. No further `params` required.          
 | `/conversations/:id` | `PATCH`      | `conversations#update`  | Updates the specified conversation, as based on the provided `params`. Returns the updated conversation.           
 | `/conversations/:id` | `PUT`        | `conversations#update`  | As above, updates the specified conversation, as based on the provided `params`. Returns the updated conversation.          
-| `/conversations/:id` | `DELETE`     | `conversations#destroy` | Destroys the specified conversations, as per `params[:id]`. The destroy action will only be allowed to complete if the `current_user` is the only remaining user in the conversation.
+| `/conversations/:id` | `DELETE`     | `conversations#destroy` | Destroys the specified conversation, as per `params[:id]`. The destroy action will only be allowed to complete if the `current_user` is the only remaining user in the conversation, otherwise the `current_user` is just removed from the conversation.
 
 #### Messages
 
-| Path                                         | Method     | Action              | Description    
-|----------------------------------------------|------------|---------------------|------------
-| `/conversations/:conversation_id/messages`    | GET        | messages#index      |            
-| `/conversations/:conversation_id/messages`  | POST       | messages#create     |            
+| Path                                           | Method     | Action              | Description    
+|------------------------------------------------|------------|---------------------|------------
+| `/conversations/:conversation_id/messages`     | GET        | messages#index      |            
+| `/conversations/:conversation_id/messages`     | POST       | messages#create     |            
 | `/conversations/:conversation_id/messages/:id` | GET        | messages#show       |            
 | `/conversations/:conversation_id/messages/:id` | PATCH      | messages#update     |            
 | `/conversations/:conversation_id/messages/:id` | PUT        | messages#update     |            
