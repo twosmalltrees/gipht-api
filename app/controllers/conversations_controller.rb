@@ -1,8 +1,10 @@
 class ConversationsController < ApplicationController
 
+
+
   def index
     @conversations = current_user.conversations
-    render json: @conversations.as_json() # Can specify which conversation params to return here as required
+    render json: @conversations # Can specify which conversation params to return here as required
   end
 
 
@@ -16,7 +18,7 @@ class ConversationsController < ApplicationController
     @conversation = Conversation.new(conversation_params)
     if @conversation.save
       current_user.conversations << @conversation
-      render json: @conversation.as_json()
+      render json: @conversation
     else
       render json: {
         staus: "failure",
@@ -34,6 +36,7 @@ class ConversationsController < ApplicationController
         staus: "failure",
         warning: "Failed to update conversation."
       }
+    end
   end
 
   def destroy
